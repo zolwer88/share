@@ -1,0 +1,86 @@
+# ==============================
+# Sphero BOLT Python Cheat-Sheet
+# ==============================
+
+# ------------------------------
+# Movement / Driving
+# ------------------------------
+robot.roll(heading, speed, duration)
+# Moves the robot in a specified direction without changing its facing.
+# heading: degrees relative to current facing (0=forward, 90=right, 180=back, 270=left)
+# speed: meters per second
+# duration: seconds
+
+robot.set_heading(degrees)
+# Rotates the robot physically to a specific heading.
+# degrees: 0–359, 0 = original facing
+
+robot.set_raw_motors(left_mode, left_speed, right_mode, right_speed)
+# Low-level control of each motor independently.
+# left_mode/right_mode: e.g., "forward", "reverse", or 0/1 flags
+# left_speed/right_speed: 0–255
+
+robot.set_motion_timeout(timeout_ms)
+# Sets a safety timeout for motion commands.
+# timeout_ms: milliseconds
+
+# ------------------------------
+# LEDs / Lights
+# ------------------------------
+robot.set_main_led(r, g, b)
+# Sets the top LED color.
+# r, g, b: 0–255
+
+robot.set_back_led_brightness(brightness)
+# Sets the back/tail LED brightness.
+# brightness: 0–255
+
+# ------------------------------
+# LED Matrix (8x8)
+# ------------------------------
+robot.set_matrix_pixel(x, y, (r, g, b))
+# Sets an individual pixel on the 8x8 matrix.
+# x, y: 0–7 (coordinates)
+# r, g, b: 0–255
+
+robot.set_matrix_pixels(matrix)
+# Sets all pixels at once.
+# matrix: list of 64 RGB tuples in row-major order [(r,g,b), ...]
+
+robot.clear_matrix()
+# Clears all pixels on the 8x8 matrix.
+
+robot.draw_pixels(pixels)
+# Draws an 8x8 grid of colors.
+# pixels: list of 8 lists of 8 RGB tuples [[(r,g,b), ...], ...]
+
+robot.draw_text(text, color=(r, g, b))
+# Scrolls text across the LED matrix.
+# text: string
+# color: tuple RGB (0–255)
+
+# ------------------------------
+# Sensor / Status
+# ------------------------------
+robot.get_heading()
+# Returns current heading in degrees (0–359).
+
+robot.get_speed()
+# Returns the current speed (meters/sec).
+
+robot.set_stabilization(True/False)
+# Enables or disables stabilization (self-leveling).
+# True = stabilize, False = disable
+
+# ------------------------------
+# Example Usage
+# ------------------------------
+# Move forward 1 foot with LED feedback:
+distance_m = 0.3048  # 1 foot
+speed_mps = 0.5
+duration = distance_m / speed_mps
+
+await robot.set_heading(0)             # face forward
+await robot.set_main_led(0, 255, 0)   # green top LED
+await robot.roll(0, speed_mps, duration)
+await robot.clear_matrix()             # clear display after movement
