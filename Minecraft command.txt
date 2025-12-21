@@ -1,18 +1,18 @@
 /summon zombie ~ ~ ~ {
     ArmorItems:[
-        {Count:1b,id:"netherite_boots",tag:{Enchantments:[{id:"protection",lvl:4s}]}},
-        {Count:1b,id:"netherite_leggings",tag:{Enchantments:[{id:"protection",lvl:4s}]}},
-        {Count:1b,id:"netherite_chestplate",tag:{Enchantments:[{id:"protection",lvl:4s}]}},
-        {Count:1b,id:"netherite_helmet",tag:{Enchantments:[{id:"protection",lvl:4s}]}}
+        {count:1,id:"minecraft:netherite_boots",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},
+        {count:1,id:"minecraft:netherite_leggings",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},
+        {count:1,id:"minecraft:netherite_chestplate",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},
+        {count:1,id:"minecraft:netherite_helmet",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}}
     ],
     HandItems:[
-        {Count:1b,id:"netherite_sword",tag:{Enchantments:[{id:"sharpness",lvl:5s}]}},
+        {count:1,id:"minecraft:netherite_sword",tag:{Enchantments:[{id:"minecraft:sharpness",lvl:5s}]}},
         {}
     ],
-    ActiveEffects:[
-        {id:"speed", amplifier:1b, duration:9999999},
-        {id:"strength", amplifier:0b, duration:9999999}
-    ],
     ArmorDropChances:[0F,0F,0F,0F],
-    HandDropChances:[0F,0F]
+    HandDropChances:[0F,0F],
+    active_effects:[
+        {id:"minecraft:speed",amplifier:1b,duration:9999999},
+        {id:"minecraft:strength",amplifier:0b,duration:9999999}
+    ]
 }
