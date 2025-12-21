@@ -1,18 +1,1 @@
-/summon zombie ~ ~ ~ {
-    ArmorItems:[
-        {count:1,id:"minecraft:netherite_boots",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},
-        {count:1,id:"minecraft:netherite_leggings",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},
-        {count:1,id:"minecraft:netherite_chestplate",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},
-        {count:1,id:"minecraft:netherite_helmet",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}}
-    ],
-    HandItems:[
-        {count:1,id:"minecraft:netherite_sword",tag:{Enchantments:[{id:"minecraft:sharpness",lvl:5s}]}},
-        {}
-    ],
-    ArmorDropChances:[0F,0F,0F,0F],
-    HandDropChances:[0F,0F],
-    active_effects:[
-        {id:"minecraft:speed",amplifier:1b,duration:9999999},
-        {id:"minecraft:strength",amplifier:0b,duration:9999999}
-    ]
-}
+/summon zombie ~ ~ ~ {ArmorItems:[{count:1,id:"minecraft:netherite_boots",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},{count:1,id:"minecraft:netherite_leggings",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},{count:1,id:"minecraft:netherite_chestplate",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}},{count:1,id:"minecraft:netherite_helmet",tag:{Enchantments:[{id:"minecraft:protection",lvl:4s}]}}],HandItems:[{count:1,id:"minecraft:netherite_sword",tag:{Enchantments:[{id:"minecraft:sharpness",lvl:5s}]}},{}],ArmorDropChances:[0F,0F,0F,0F],HandDropChances:[0F,0F],active_effects:[{id:"minecraft:speed",amplifier:1b,duration:9999999},{id:"minecraft:strength",amplifier:0b,duration:9999999}]}
